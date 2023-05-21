@@ -1,111 +1,111 @@
 <quiz>
   <question>
-    <text>Question 1: What is the capital of Australia?</text>
+    <text>Question 1: What is CSS?</text>
     <options>
-      <option>Melbourne</option>
-      <option>Sydney</option>
-      <option>Canberra</option>
-      <option>Brisbane</option>
+      <option>CSS is a style sheet language</option>
+      <option>CSS is designed to separate the presentation and content, including layout, colors, and fonts</option>
+      <option>CSS is the language used to style the HTML documents</option>
+      <option>All of the mentioned</option>
     </options>
-    <answer>Canberra</answer>
+    <answer>All of the mentioned</answer>
   </question>
   <question>
-    <text>Question 2: What is the national animal of Scotland?</text>
+    <text>Question 2: Which of the following tag is used to embed css in html page?</text>
     <options>
-      <option>Unicorn</option>
-      <option>Eagle</option>
-      <option>Lion</option>
-      <option>Elephant</option>
+      <option><css></option>
+      <option><!DOCTYPE html></option>
+      <option><script></option>
+      <option><style></option>
     </options>
-    <answer>Unicorn</answer>
-  </question>
-  <!-- Add more questions here -->
-  <question>
-    <text>Question 3: Which country is the smallest?</text>
-    <options>
-      <option>Madagascar</option>
-      <option>Sweden</option>
-      <option>Vatican City</option>
-      <option>Fiji</option>
-    </options>
-    <answer>Vatican City</answer>
+    <answer><style></answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 4: Which country is the largest?</text>
+    <text>Question 3: Which of the following CSS selectors are used to specify a group of elements?</text>
     <options>
-      <option>India</option>
-      <option>China</option>
-      <option>USA</option>
-      <option>Russia</option>
+      <option>tag</option>
+      <option>id</option>
+      <option>class</option>
+      <option>both class and tag</option>
     </options>
-    <answer>Russia</answer>
+    <answer>class</answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 5: Which country is called the rising sun?</text>
+    <text>Question 4: Which of the following has introduced text, list, box, margin, border, color, and background properties?</text>
     <options>
-      <option>Japan</option>
-      <option>North Korea</option>
-      <option>South Korea</option>
-      <option>Taiwan</option>
+      <option>HTML</option>
+      <option>PHP</option>
+      <option>CSS</option>
+      <option>Ajax</option>
     </options>
-    <answer>Japan</answer>
+    <answer>CSS</answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 6: Which mammal is the largest?</text>
+    <text>Question 5: Which of the following CSS framework is used to create a responsive design?</text>
     <options>
-      <option>Blue Whale</option>
-      <option>Elephant</option>
-      <option>Ostrich</option>
-      <option>Shark</option>
+      <option>django</option>
+      <option>rails</option>
+      <option>larawell</option>
+      <option>bootstrap</option>
     </options>
-    <answer>Blue Whale</answer>
+    <answer>bootstrap</answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 7: What is the highest mountain in the world?</text>
+    <text>Question 6: Which of the following CSS selector is used to specify a rule to bind a particular unique element?</text>
     <options>
-      <option>Mt. Everest</option>
-      <option>Mt. Apo</option>
-      <option>Mt. Kilimanjaro</option>
-      <option>Mt. Aconcagua</option>
+      <option>tag</option>
+      <option>id</option>
+      <option>class</option>
+      <option>both class and tag</option>
     </options>
-    <answer>Mt. Everest</answer>
+    <answer>id</answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 8: Who was the first president of USA?</text>
+    <text>Question 7: Which of the following type of HTML tag is used to define an internal style sheet?</text>
     <options>
-      <option>George Washington</option>
-      <option>Abraham Lincoln </option>
-      <option>Thomas Jefferson</option>
-      <option>Benjamin Franklin</option>
+      <option><script></option>
+      <option><link></option>
+      <option><class></option>
+      <option><style></option>
     </options>
-    <answer>George Washington</answer>
+    <answer><style></answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 9: Who was the first person on the moon?</text>
+    <text>Question 8:Which of the following CSS property is used to make the text bold?</text>
     <options>
-      <option>John Glenn</option>
-      <option>Yuri Gagarin</option>
-      <option>Neil Armstrong</option>
-      <option>Sally Ride</option>
+      <option>text-decoration: bold</option>
+      <option>font-weight: bold</option>
+      <option>font-style: bold</option>
+      <option>text-align: bold</option>
     </options>
-    <answer>Neil Armstrong</answer>
+    <answer>font-weight: bold</answer>
   </question>
   <!-- Add more questions here -->
   <question>
-    <text>Question 10: Who wrote Hamlet?</text>
+    <text>Question 9: Which of the following CSS style property is used to specify an italic text?</text>
     <options>
-      <option>William Golding</option>
-      <option>William Henry Harrison</option>
-      <option>William Shakespear</option>
-      <option>William Holden</option>
+      <option>style</option>
+      <option>font</option>
+      <option>font-style</option>
+      <option>@font-face</option>
     </options>
-    <answer>William Shakespear</answer>
+    <answer>font-style</answer>
+  </question>
+  <!-- Add more questions here -->
+  <question>
+    <text>Question 10: Which of the following is the correct syntax to link an external style sheet in the HTML file?</text>
+    <options>
+      <option><link rel=”stylesheet” href=”style.css” /></option>
+      <option><link rel=”stylesheet” src=”style.css” /></option>
+      <option><style rel=”stylesheet” src=”style.css” /></option>
+      <option><style rel=”stylesheet” link=”style.css” /></option>
+    </options>
+    <answer><link rel=”stylesheet” href=”style.css” /></answer>
   </question>
   <!-- Add more questions here -->
 </quiz>
