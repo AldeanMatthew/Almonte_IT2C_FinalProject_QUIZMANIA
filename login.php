@@ -23,8 +23,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: index.php");
         exit;
     } else {
-        // If the login fails, display an error message
-        $error_message = "Invalid username or password";
+        // If the login fails, display an error message based on the error type
+        if ($username !== 'User' && $password !== 'password123') {
+            $error_message = "Invalid username and password";
+        } elseif ($username !== 'User') {
+            $error_message = "Invalid username";
+        } else {
+            $error_message = "Invalid password";
+        }
     }
 }
 ?>
