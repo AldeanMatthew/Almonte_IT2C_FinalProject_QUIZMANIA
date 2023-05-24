@@ -29,9 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session_start();
         $_SESSION['score9'] = $score9;
 
-        // Redirect to the index.php file
-        header('Location: index.php');
-        exit;
+        // Set a session variable to indicate that the user has submitted the quiz
+        $_SESSION['quiz9_submitted'] = true;
+        // Redirect back to index.php
+        header("Location: index.php");
+        exit();
     } else {
         $errorMessage = "Please answer all 10 questions before submitting.";
     }
