@@ -26,47 +26,169 @@ $score12 = isset($_SESSION["score12"]) ? $_SESSION["score12"] : 0;
 $score13 = isset($_SESSION["score13"]) ? $_SESSION["score13"] : 0;
 $score14 = isset($_SESSION["score14"]) ? $_SESSION["score14"] : 0;
 $score15 = isset($_SESSION["score15"]) ? $_SESSION["score15"] : 0;
-
+// Calculate the total score
 $totalScore = $score1 + $score2 + $score3 + $score4 + $score5 + $score6 + $score7 + $score8 + $score9 + $score10 + $score11 + $score12 + $score13 + $score14 + $score15;
-
 
 // Check if the logout button is clicked
 if (isset($_POST['logout'])) {
     // Destroy all session data
     session_destroy();
-    
+
     // Redirect the user to the login page or any other desired page
     header("Location: login.php");
     exit();
+	
+
 }
+
+// Check if the user has submitted quiz1
+if (isset($_SESSION['quiz1_submitted']) && $_SESSION['quiz1_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 1: " . $score1 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz1_submitted'] = false;
+}
+
+// Check if the user has submitted quiz2
+if (isset($_SESSION['quiz2_submitted']) && $_SESSION['quiz2_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 2: " . $score2 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz2_submitted'] = false;
+}
+
+// Check if the user has submitted quiz3
+if (isset($_SESSION['quiz3_submitted']) && $_SESSION['quiz3_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 3: " . $score3 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz3_submitted'] = false;
+}
+
+// Check if the user has submitted quiz4
+if (isset($_SESSION['quiz4_submitted']) && $_SESSION['quiz4_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 4: " . $score4 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz4_submitted'] = false;
+}
+
+// Check if the user has submitted quiz5
+if (isset($_SESSION['quiz5_submitted']) && $_SESSION['quiz5_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 5: " . $score5 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz5_submitted'] = false;
+}
+
+// Check if the user has submitted quiz6
+if (isset($_SESSION['quiz6_submitted']) && $_SESSION['quiz6_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 6: " . $score6 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz6_submitted'] = false;
+}
+
+// Check if the user has submitted quiz7
+if (isset($_SESSION['quiz7_submitted']) && $_SESSION['quiz7_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 7: " . $score7 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz7_submitted'] = false;
+}
+
+// Check if the user has submitted quiz8
+if (isset($_SESSION['quiz8_submitted']) && $_SESSION['quiz8_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 8: " . $score8 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz8_submitted'] = false;
+}
+
+// Check if the user has submitted quiz9
+if (isset($_SESSION['quiz9_submitted']) && $_SESSION['quiz9_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 9: " . $score9 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz9_submitted'] = false;
+}
+
+// Check if the user has submitted quiz10
+if (isset($_SESSION['quiz10_submitted']) && $_SESSION['quiz10_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 10: " . $score10 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz10_submitted'] = false;
+}
+
+// Check if the user has submitted quiz11
+if (isset($_SESSION['quiz11_submitted']) && $_SESSION['quiz11_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 11: " . $score11 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz11_submitted'] = false;
+}
+
+// Check if the user has submitted quiz12
+if (isset($_SESSION['quiz12_submitted']) && $_SESSION['quiz12_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 12: " . $score12 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz12_submitted'] = false;
+}
+
+// Check if the user has submitted quiz13
+if (isset($_SESSION['quiz13_submitted']) && $_SESSION['quiz13_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 13: " . $score13 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz13_submitted'] = false;
+}
+
+// Check if the user has submitted quiz14
+if (isset($_SESSION['quiz14_submitted']) && $_SESSION['quiz14_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 14: " . $score14 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz14_submitted'] = false;
+}
+
+// Check if the user has submitted quiz15
+if (isset($_SESSION['quiz15_submitted']) && $_SESSION['quiz15_submitted']) {
+    // Display the welcome back popup
+    echo "<script>alert('Welcome back! Your score in Quiz 15: " . $score15 . "/10');</script>";
+    
+    // Reset the session variable
+    $_SESSION['quiz15_submitted'] = false;
+}
+
+
 ?>
+
 
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QUIZMANIA</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <style>
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .popup-content {
-      background-color: #fff;
-      width: 300px;
-      margin: 100px auto;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    /* Styling for Quiz Number */
+    <title>QUIZMANIA</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style>
+        /* CSS styles */
+		
     .quiz-number {
       font-weight: bold;
       text-decoration: none; /* Remove underline */
@@ -86,140 +208,18 @@ if (isset($_POST['logout'])) {
     .quiz-number:hover {
       color: #add8e6;
     }
+		
+    </style>
+    <script>
+        window.onload = function () {
+            // Code executed when the page is loaded
+        };
 
-  </style>
-  <script>
-  window.onload = function() {
-    var popup = document.querySelector('.popup');
-    <?php
-if ($score1 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score2 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score3 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score4 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score5 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score6 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score7 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score8 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score9 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score10 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score11 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score12 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score13 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score14 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-    <?php
-if ($score15 !== 0):
-?>
-     popup.style.display = 'block';
-    <?php
-endif;
-?>
-
-  };
-
-
-  function closePopup() {
-    var popup = document.querySelector('.popup');
-    popup.style.display = 'none';
-  }
-</script>
-
+        function closePopup() {
+            // Function to close the popup
+        }
+		
+    </script>
 </head>
 <body>
   <div class="background-container">
@@ -247,11 +247,11 @@ echo $username;
       <p>_______________________</p>
       <h2>Select a Quiz</h2>
       <table>
-  <tr>
-    <th>Quiz</th>
-    <th>Score</th>
-  </tr>
-  <tr>
+                <tr>
+                    <th>Quiz</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
     <td><a href="quiz.php" class="quiz-number <?php
 echo ($score1 !== 0) ? 'completed-quiz' : '';
 ?>">Quiz 1</a></td>
@@ -372,260 +372,20 @@ echo $score15;
 ?>/10</td>
   </tr>
 </table>
-      <p>_______________________</p>
-    <form action="" method="post">
-  <input type="submit" name="logout" value="Logout" onclick="return confirmLogout()">
-</form>
 
-<script>
-  function confirmLogout() {
-    return confirm("Are you sure you want to logout?");
-  }
-</script>
+            <!-- Logout button -->
+            <form action="" method="post">
+                <input type="submit" name="logout" value="Logout" onclick="return confirmLogout()">
+            </form>
 
-  
-  </div>
-<?php
-if ($score1 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score1;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
+            
+        </div>
     </div>
-  </div>
-<?php
-endif;
-?>
 
-<?php
-if ($score2 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score2;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score3 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score3;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score4 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score4;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score5 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score5;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score6 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score6;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score7 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score7;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score8 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score8;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score9 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score9;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score10 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score10;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score11 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score11;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score12 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score12;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score13 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score13;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score14 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score14;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-<?php
-if ($score15 !== 0):
-?>
- <div class="popup">
-    <div class="popup-content">
-      <h2>Your Score</h2>
-      <p><?php
-    echo $score15;
-?> / 10</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-<?php
-endif;
-?>
-
-  
+    <script>
+        function confirmLogout() {
+            return confirm("Are you sure you want to logout?");
+        }
+    </script>
 </body>
 </html>
-
