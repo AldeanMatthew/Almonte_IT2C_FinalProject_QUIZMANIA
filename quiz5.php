@@ -1,6 +1,6 @@
 <?php
 // Load the XML file
-$xml = simplexml_load_file('quiz5.xml');
+$xml = simplexml_load_file('mistal_IT2C_QUIZMANIA.xml/quiz5.xml');
 
 // Convert XML object to array
 $questions = [];

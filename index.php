@@ -177,6 +177,17 @@ if (isset($_SESSION['quiz15_submitted']) && $_SESSION['quiz15_submitted']) {
 }
 
 
+if ($totalScore >= 150) {
+    echo '<script>';
+    echo 'window.onload = function() {';
+    echo 'alert("Congratulations! You perfected all the quiz!🎂");';
+    echo '}';
+    echo '</script>';
+}
+
+
+
+
 ?>
 
 

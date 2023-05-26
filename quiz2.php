@@ -1,6 +1,6 @@
 <?php
 // Load the XML file
-$xml = simplexml_load_file('quiz2.xml');
+$xml = simplexml_load_file('mistal_IT2C_QUIZMANIA.xml/quiz2.xml');
 
 // Convert XML object to array
 $questions = [];
@@ -29,12 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session_start();
         $_SESSION['score2'] = $score2;
 
+        // Check if the score reaches 150 or higher
+        if ($score2 >= 150) {
+            echo '<script>';
+            echo 'window.onload = function() {';
+            echo 'alert("Congratulations! Your total score is 150 or higher!");';
+            echo '}';
+            echo '</script>';
+        }
+
         // Set a session variable to indicate that the user has submitted the quiz
         $_SESSION['quiz2_submitted'] = true;
         // Redirect back to index.php
         header("Location: index.php");
         exit();
-		
     } else {
         $errorMessage = "Please answer all questions before submitting.";
     }
@@ -45,11 +53,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QUIZMANIA QUIZ 2</title>
-  <link rel="stylesheet" type="text/css" href="css/quiz.css">
-  
+    <title>QUIZMANIA QUIZ 2</title>
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <script>
+        window.onload = function () {
+            startTimer();
+        };
+
+        function validateForm() {
+            // Add any additional form validation logic here if needed
+            return true;
+        }
+    </script>
 </head>
-<body onload="startTimer()">
+<body>
     <div class="container">
         <h1>QUIZMANIA QUIZ 2</h1>
         <div id="timer" class="timer"></div>
